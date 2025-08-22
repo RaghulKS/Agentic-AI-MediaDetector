@@ -1,0 +1,121 @@
+{
+  "system_config": {
+    "version": "1.0.0",
+    "name": "Agentic AI Image Authenticity Detector",
+    "description": "Multi-agent system for comprehensive image authenticity detection"
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "data/authenticity_analysis.log",
+    "console_output": true,
+    "max_file_size_mb": 100,
+    "backup_count": 5
+  },
+  "analysis_settings": {
+    "timeout_seconds": 300,
+    "max_parallel_agents": 3,
+    "confidence_threshold": 0.7,
+    "enable_caching": true,
+    "cache_expiry_hours": 24,
+    "save_intermediate_results": true
+  },
+  "agent_settings": {
+    "planner": {
+      "enabled": true,
+      "max_workflow_steps": 10,
+      "fallback_mode_enabled": true
+    },
+    "classifier": {
+      "enabled": true,
+      "models": {
+        "clip": {
+          "model_name": "openai/clip-vit-base-patch32",
+          "weight": 0.4
+        },
+        "vit": {
+          "model_name": "google/vit-base-patch16-224", 
+          "weight": 0.3
+        }
+      },
+      "anomaly_detection_threshold": 0.6
+    },
+    "forensics": {
+      "enabled": true,
+      "metadata_completeness_threshold": 0.5,
+      "suspicious_pattern_sensitivity": 0.7,
+      "timestamp_validation_enabled": true
+    },
+    "retriever": {
+      "enabled": true,
+      "max_search_results": 10,
+      "search_timeout_seconds": 30,
+      "rate_limit_delay_seconds": 1,
+      "credible_sources": [
+        "reuters.com",
+        "ap.org", 
+        "bbc.com",
+        "getty.com",
+        "shutterstock.com"
+      ]
+    },
+    "counterfactual": {
+      "enabled": true,
+      "max_scenarios": 7,
+      "confidence_adjustment_enabled": true,
+      "bayesian_reasoning": true
+    },
+    "explainer": {
+      "enabled": true,
+      "explanation_depth": "comprehensive",
+      "audience_level": "mixed",
+      "include_technical_details": true
+    },
+    "reporter": {
+      "enabled": true,
+      "output_format": "pdf",
+      "include_visualizations": true,
+      "executive_summary_length": "standard",
+      "technical_appendix": true
+    }
+  },
+  "model_settings": {
+    "openai": {
+      "model_name": "gpt-4o",
+      "temperature": 0.1,
+      "max_tokens": 2048,
+      "request_timeout": 60
+    },
+    "vision_models": {
+      "device": "auto",
+      "batch_size": 1,
+      "precision": "float32"
+    }
+  },
+  "output_settings": {
+    "reports_directory": "reports",
+    "data_directory": "data",
+    "include_thumbnails": true,
+    "max_file_size_mb": 50,
+    "cleanup_old_files": true,
+    "retention_days": 30
+  },
+  "security_settings": {
+    "validate_file_types": true,
+    "allowed_extensions": [".jpg", ".jpeg", ".png", ".bmp", ".tiff", ".webp"],
+    "max_image_size_mb": 20,
+    "scan_for_malware": false
+  },
+  "performance_settings": {
+    "enable_gpu": true,
+    "memory_limit_gb": 8,
+    "parallel_processing": true,
+    "optimization_level": "balanced"
+  },
+  "advanced_settings": {
+    "experimental_features": false,
+    "debug_mode": false,
+    "profiling_enabled": false,
+    "custom_model_paths": {},
+    "plugin_directory": "plugins"
+  }
+}

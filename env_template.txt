@@ -1,0 +1,49 @@
+# Agentic AI Image Authenticity Detector Configuration
+# Copy this file to .env and fill in your actual values
+
+# Required: OpenAI API Key for GPT-4o and agent operations
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Optional: Alternative API endpoints (if using Azure OpenAI or other providers)
+# OPENAI_API_BASE=https://your-resource.openai.azure.com/
+# OPENAI_API_VERSION=2023-12-01-preview
+# OPENAI_API_TYPE=azure
+
+# Optional: Model configurations
+# OPENAI_MODEL_NAME=gpt-4o
+# OPENAI_TEMPERATURE=0.1
+# OPENAI_MAX_TOKENS=2048
+
+# Optional: Logging configuration
+# LOG_LEVEL=INFO
+# LOG_FILE=data/authenticity_analysis.log
+
+# Optional: Analysis configuration
+# ANALYSIS_TIMEOUT_SECONDS=300
+# MAX_PARALLEL_AGENTS=3
+# CONFIDENCE_THRESHOLD=0.7
+
+# Optional: Report generation settings
+# REPORT_OUTPUT_DIR=reports
+# REPORT_INCLUDE_THUMBNAILS=true
+# REPORT_MAX_FILE_SIZE_MB=50
+
+# Optional: Vision model settings
+# VISION_MODEL_DEVICE=auto
+# CLIP_MODEL_NAME=openai/clip-vit-base-patch32
+# VIT_MODEL_NAME=google/vit-base-patch16-224
+
+# Optional: Search settings
+# SEARCH_MAX_RESULTS=10
+# SEARCH_TIMEOUT_SECONDS=30
+# SEARCH_RATE_LIMIT_DELAY=1
+
+# Optional: Cache settings
+# ENABLE_CACHING=true
+# CACHE_DIR=.cache
+# CACHE_EXPIRY_HOURS=24
+
+# Development/Debug settings
+# DEBUG_MODE=false
+# SAVE_INTERMEDIATE_RESULTS=true
+# VERBOSE_LOGGING=false
